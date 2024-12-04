@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f4f4f9;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        #about {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            padding: 3rem;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.1);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+        }
+
+        .project img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        #contact, #resume {
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--secondary-color);
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <h1>Ankit Navi</h1>
+        <p>Full Stack Developer | Creative Technologist</p>
+    </header>
+
+    <section id="about" class="container">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+        <div>
+            <h2>About Me</h2>
+            <p>Innovative software developer with a passion for creating elegant, efficient solutions. Combining technical expertise with creative problem-solving to build impactful digital experiences.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">TypeScript</span>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="download (1).jpeg" alt="Project 1">
+                <div class="project-content">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Full-stack application with microservices architecture and real-time inventory management.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="charbox.jpeg" alt="Project 2">
+                <div class="project-content">
+                    <h3>AI Chatbot</h3>
+                    <p>Machine learning powered conversational interface with natural language processing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="ankitnavi0@gmail.com" class="contact-link">ankitnavi0@gmail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/ankit_n3/profilecard/?igsh=OTBxcDhxNW03eWcy" class="contact-link">ankit_n3</a></p>
+    </section>
+
+    <section id="resume" class="container">
+        <h2>Resume</h2>
+        <a href="11ankit resume.pdf" class="contact-link" download>Download Full Resume (PDF)</a>
+    </section>
+
+    <footer>
+        <p>© 2024 Ankit Navi. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
